@@ -6,7 +6,7 @@ import Movie from "../components/Movie";
 
 const GET_MOVIES = gql`
   {
-    movies {
+    movies(rating:9) {
       id
       medium_cover_image
       isLiked @client
@@ -22,9 +22,7 @@ const Container = styled.div`
 `;
 
 const Header = styled.header`
-  background-image: linear-gradient(-45deg, #d754ab, #fd723a);
   height: 45vh;
-  color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -44,15 +42,13 @@ const Subtitle = styled.h3`
 
 const Loading = styled.div`
   font-size: 18px;
-  opacity: 0.5;
-  font-weight: 500;
   margin-top: 10px;
 `;
 
 const Movies = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 25px;
+  grid-gap: 30px;
   width: 90%;
   position: relative;
   top: 10px;

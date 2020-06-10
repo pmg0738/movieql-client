@@ -14,8 +14,6 @@ const Container = styled.div`
   height: 400px;
   border-radius: 7px;
   width: 100%;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  background-color: transparent;
   margin-bottom: 50px;
 `;
 
@@ -43,7 +41,7 @@ export default ({ id, bg, isLiked }) => {
       <Link to={`/${id}`}>
         <Poster bg={bg} />
       </Link>
-      <Button onClick={toggleMovie}>{isLiked ? "Unlike" : "Like"}</Button>
+      {/* <Button onClick={toggleMovie}>{isLiked ? "Unlike" : "Like"}</Button> */}
     </Container>
   );
 };
